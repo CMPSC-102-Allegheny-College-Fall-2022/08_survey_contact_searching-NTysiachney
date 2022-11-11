@@ -70,17 +70,33 @@ Wow, we found some contacts! Email them to learn about your job!
 from contactsearcher import search
 ```
 
-TODO: Write at least one paragraph to explain the request source code
+This code imports the search module into main. Since search is localted in the
+contactsearcher folder, one must import search from this folder so python knows
+where to look for it
 
 #### The source code statement that extracts the current job description for a contact
 
-TODO: Use a fenced code block to provide the requested source code TODO: Write
-at least one paragraph to explain the request source code
+```
+current_contact_job = contact_line[1]
+```
+
+This line assigns the value at index position 1 of contact line to a variable
+named current_contact_job. Using the code found in the link about csv files, the
+csv is converted into a psuedo list. Because of this, simply taking the index
+position of the job description (1) allows the program to get the job
+description from the csv.
 
 #### Invocation of the function called `search_for_email_given_job`
 
-TODO: Use a fenced code block to provide the requested source code TODO: Write
-at least one paragraph to explain the request source code
+TODO: Use a fenced code block to provide the requested source code
+
+```
+contact = search.search_for_email_given_job(job_description, contacts_text)
+```
+
+This code calls the search module and the search_for_email_given_job function
+from within that module. It passes in the job description and contact list as
+arguments. TODO: Write at least one paragraph to explain the request source code
 
 #### Test case for the function called `search_for_email_given_job`
 
