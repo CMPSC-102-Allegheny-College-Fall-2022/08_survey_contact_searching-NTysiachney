@@ -15,7 +15,7 @@ def search_for_email_given_job(job_description: str, contacts: str) -> List[List
     emailReader = csv.reader(contacts.splitlines(), delimiter=',', quotechar='"')
     for contact_line in emailReader: #iterates through CSV
         current_contact_job = contact_line[1] #assigns the value at index 1 to current_contacts_job variable
-        if job_description.lower() in contact_line.lower(): #if the job descriptions match
+        if job_description.lower() in current_contact_job.lower() : #if the job descriptions match
             contact_list.append(contact_line) #adds to contact list
     return contact_list
 
